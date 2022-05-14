@@ -1,0 +1,246 @@
+
+/*
+    card CSS for examples (maybe remove it?) 
+*/
+
+.hover-img {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  margin: 8px;
+  max-width: 320px;
+  min-width: 240px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.hover-img * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.hover-img:before,
+.hover-img:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 52px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 52px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(2);
+}
+
+.hover-img img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.hover-img a{
+  text-decoration: none;
+  color: #fff;
+}
+.hover-img a:hover{
+  text-decoration: underline;
+  color: #40579b;
+}
+
+.hover-img figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hover-img:hover:before,
+.hover-img:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.hover-img:hover > img {
+  opacity: 0.7;
+}
+
+.hover-img:hover figcaption {
+  opacity: 1;
+}
+
+/*
+  rectangles for studies section
+*/
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 1%;
+}
+
+.rectangle.little{
+  width: fit-content;
+  height: 10%;
+  background: #495e97;
+  
+  border-radius: 6%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.rectangle h1{
+  padding-top: 8px;
+  padding-bottom: 0%;
+  font-size: 24px;
+}
+
+.rectangle h3{
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.rectangle li{
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.rectangle.bg1{
+  background: #283048;
+}
+
+.rectangle.bg2{
+  background: #343f5e;
+}
+
+
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 0rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+/*
+  Background 1 
+*/
+
+.bg-titanium {
+  background: #283048;
+}
+
+/*
+  Background 2 
+*/
+
+.bg-titanium-light{
+  background: #343f5e;
+}
+
+.navbar-nav.navbar-center {
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+/*
+  fade out animation
+*/
+
+.elementToFadeOut {
+  animation: fadeOut 0.5s linear forwards;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity:1; }
+  50% { opacity:0.5; } 
+  100% { opacity:0; } 
+  }
+
+/*
+  fade in animation
+*/
+
+.elementToFadeIn {
+  animation: fadeIn 0.5s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity:0; }
+  50% { opacity:0.5; } 
+  100% { opacity:1; } 
+  }
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  max-width: fit-content;
+  color: white;
+  cursor: pointer;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0062ca;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+  
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  
+}
