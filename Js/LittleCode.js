@@ -43,15 +43,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const AboutMeButton = document.getElementById('AboutButton');
-
-AboutMeButton.addEventListener('click', MakeItVisible);
-
-function MakeItVisible()
-{
-  const textToDissapear = document.getElementById('AboutIntro');
-  const buttonToDissapear = document.getElementById('AboutButton');
-
+window.addEventListener('load', ()=>{
   const photoToAppear = document.getElementById('AboutPhoto');
   const textToAppear = document.getElementById('AboutText');
 
@@ -60,13 +52,13 @@ function MakeItVisible()
   textToAppear.style.visibility = 'visible';
   photoToAppear.style.visibility = 'visible';
 
-  buttonToDissapear.style.pointerEvents = 'none';
+  photoToAppear.classList.add('elementToFadeLeft');
+  textToAppear.classList.add('elementToFadeRight');
+})
 
-  textToDissapear.classList.add("elementToFadeOut");
-  buttonToDissapear.classList.add('elementToFadeOut');
 
-  photoToAppear.classList.add('elementToFadeIn');
-  textToAppear.classList.add('elementToFadeIn');
+
+
   
-}
+  
 

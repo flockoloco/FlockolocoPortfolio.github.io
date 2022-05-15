@@ -191,29 +191,29 @@
   fade out animation
 */
 
-.elementToFadeOut {
-  animation: fadeOut 0.5s linear forwards;
+.elementToFadeLeft {
+  animation: fadeLeft 0.5s linear forwards;
 }
 
 
-@keyframes fadeOut {
-  0% { opacity:1; }
-  50% { opacity:0.5; } 
-  100% { opacity:0; } 
+@keyframes fadeLeft {
+  0% { opacity:0; left: 0%; }
+  50% { opacity:0.5; left: 10%;} 
+  100% { opacity:1; left: 25%;} 
   }
 
 /*
   fade in animation
 */
 
-.elementToFadeIn {
-  animation: fadeIn 0.5s linear forwards;
+.elementToFadeRight {
+  animation: fadeRight 0.5s linear forwards;
 }
 
-@keyframes fadeIn {
-  0% { opacity:0; }
-  50% { opacity:0.5; } 
-  100% { opacity:1; } 
+@keyframes fadeRight {
+  0% { opacity:0; right: 0%;}
+  50% { opacity:0.5; right: 10%;} 
+  100% { opacity:1; right: 25%;} 
   }
 
 .hover-underline-animation {
