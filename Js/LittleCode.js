@@ -35,7 +35,7 @@ fifthProject.addEventListener('click', ()=> {
 window.addEventListener('scroll', () => {
   const scrollTop =
     document.body.scrollTop - ( document.getElementById('NavbarContainer').offsetHeight + document.getElementById('AboutMe').offsetHeight);
-  scrollProgress.style.height = `${((scrollTop + 50) / height) * 100}%`;
+  scrollProgress.style.height = `${((scrollTop) / height) * 120}%`;
   
   if(scrollTop < - 100)
   {
