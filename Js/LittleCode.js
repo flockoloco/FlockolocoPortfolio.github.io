@@ -5,6 +5,10 @@ document.getElementById('Studies').offsetHeight;
 
 //const offSetFooter = document.getElementById('Projects').offsetHeight + document.getElementById('Contacts').offsetHeight + document.getElementById('Footer').offsetHeight;
 
+const navBarContainer = document.getElementById('NavbarContainer').offsetHeight;
+const aboutMeContainer = document.getElementById('AboutMe').offsetHeight;
+
+
 const firstProject = document.getElementById('first');
 const GameJam2020 = document.getElementById('second')
 const secondProject = document.getElementById('third');
@@ -34,10 +38,10 @@ fifthProject.addEventListener('click', ()=> {
 
 window.addEventListener('scroll', () => {
   const scrollTop =
-    document.body.scrollTop - ( document.getElementById('NavbarContainer').offsetHeight + document.getElementById('AboutMe').offsetHeight);
+    document.body.scrollTop - (navBarContainer + aboutMeContainer);
   scrollProgress.style.height = `${((scrollTop) / height) * 120}%`;
   
-  if(scrollTop < - 100)
+  if(scrollTop < 0)
   {
     scrollProgress.style.height = `${0}%`;
   }
